@@ -1,6 +1,9 @@
 // ignore numpy files
 *.npy
 
+// ignore .pickle files
+*.pickle
+
 // latex
 *.aux
 *.fdb_latexmk
