@@ -1,0 +1,5 @@
+# ignore numpy files
+*.npy
+
+# macos
+.DS_Store
