@@ -32,19 +32,19 @@ This section should report on the following questions:
 \centering
 \begin{tabular}{llrrr}
     \toprule
-    Accuracy &  & Raw Amplitude & Mel Spectogram & Class \% \\
+    Accuracy &  & Raw Amplitude & Mel Spectogram \\
     \midrule
-    \textsc{Overall} & & 0.198 & 0.252 & 100\% \\
-    \textsc{Class 0} & & 0.197 & 0.160 & 12.6\% \\
-    \textsc{Class 1} & & 0.026 & 0.462 & 3.54\% \\
-    \textsc{Class 2} & & 0.592 & 0.020 & 12.53\% \\
-    \textsc{Class 3} & & 0.096 & 0.183 & 9.42\% \\
-    \textsc{Class 4} & & 0.072 & 0.227 & 10.93\% \\
-    \textsc{Class 5} & & 0.174 & 0.303 & 12.98\% \\
-    \textsc{Class 6} & & 0.033 & 0.433 & 1.49\% \\
-    \textsc{Class 7} & & 0.119 & 0.102 & 11.85\% \\
-    \textsc{Class 8} & & 0.140 & 0.945 & 12.03\% \\
-    \textsc{Class 9} & & 0.160 & 0.133 & 12.61\% \\
+    \textsc{Overall} & & 0.198 & 0.252 \\
+    \textsc{Class 0} & & 0.197 & 0.160 \\
+    \textsc{Class 1} & & 0.026 & 0.462 \\
+    \textsc{Class 2} & & 0.592 & 0.020 \\
+    \textsc{Class 3} & & 0.096 & 0.183 \\
+    \textsc{Class 4} & & 0.072 & 0.227 \\
+    \textsc{Class 5} & & 0.174 & 0.303 \\
+    \textsc{Class 6} & & 0.033 & 0.433 \\
+    \textsc{Class 7} & & 0.119 & 0.102 \\
+    \textsc{Class 8} & & 0.140 & 0.945 \\
+    \textsc{Class 9} & & 0.160 & 0.133 \\
     \bottomrule
 \end{tabular}
 \caption{\label{tab:rf_results} Accuracies of Logistic Regression models on Raw Amplitude and Mel Spectogram Data.}
@@ -81,19 +81,19 @@ This section should report on the following questions:
     \centering
     \begin{tabular}{llrrr}
         \toprule
-        Accuracy &  & Raw Amplitude & Mel Spectogram & Class \% \\
+        Accuracy &  & Raw Amplitude & Mel Spectogram \\
         \midrule
-        \textsc{Overall} & & 0.248 & 0.334 & 100\% \\
-        \textsc{Class 0} & & 0.230 & 0.280 & 12.6\% \\
-        \textsc{Class 1} & & 0.000 & 0.256 & 3.54\% \\
-        \textsc{Class 2} & & 0.746 & 0.211 & 12.53\% \\
-        \textsc{Class 3} & & 0.035 & 0.424 & 9.42\% \\
-        \textsc{Class 4} & & 0.110 & 0.216 & 10.93\% \\
-        \textsc{Class 5} & & 0.390 & 0.375 & 12.98\% \\
-        \textsc{Class 6} & & 0.033 & 0.167 & 1.49\% \\
-        \textsc{Class 7} & & 0.102 & 0.356 & 11.85\% \\
-        \textsc{Class 8} & & 0.212 & 0.441 & 12.03\% \\
-        \textsc{Class 9} & & 0.127 & 0.437 & 12.61\% \\
+        \textsc{Overall} & & 0.248 & 0.334 \\
+        \textsc{Class 0} & & 0.230 & 0.280 \\
+        \textsc{Class 1} & & 0.000 & 0.256 \\
+        \textsc{Class 2} & & 0.746 & 0.211 \\
+        \textsc{Class 3} & & 0.035 & 0.424 \\
+        \textsc{Class 4} & & 0.110 & 0.216 \\
+        \textsc{Class 5} & & 0.390 & 0.375 \\
+        \textsc{Class 6} & & 0.033 & 0.167 \\
+        \textsc{Class 7} & & 0.102 & 0.356 \\
+        \textsc{Class 8} & & 0.212 & 0.441 \\
+        \textsc{Class 9} & & 0.127 & 0.437 \\
         \bottomrule
     \end{tabular}
     \caption{\label{tab:lr_results} Accuracies of Random Forest Classifier models on Raw Amplitude and Mel Spectogram Data.}
@@ -118,34 +118,72 @@ What did you do? Credit will be given for:
 \subsubsection{Results}
 Present your results of your hyperparameter search in a way that best reflects how to communicate your conclusions.
 
+\begin{itemize}
+    \item RFC: The results from the hyperparameter grid search on Random Forest Classifiers showed...
+    \begin{table}[ht]
+    \centering
+    \begin{tabular}{llrrr}
+        \toprule
+        \# Estimators & & Raw Amplitude & Mel Spectogram & Overall Rank \\
+        \midrule
+        \textsc{360} & & 0.235 & 0.423 & 5 \\
+        \textsc{400} & & 0.235 & 0.428 & 3 \\
+        \textsc{440} & & 0.238 & 0.424 & 4 \\
+        \textsc{480} & & 0.240 & 0.426 & 1 \\
+        \textsc{520} & & 0.242 & 0.424 & 1 \\
+        \bottomrule
+    \end{tabular}
+    \caption{\label{tab:rf_search_results} Accuracies of Random Forest Models of Varying Estimator Counts}
+    \end{table}
+    
+    \item SVM: The results on ...
+    \begin{table}[ht]
+    \centering
+    \begin{tabular}{llrrr}
+        \toprule
+        C Value & & Raw Amplitude & Mel Spectogram & Overall Rank \\
+        \midrule
+        \textsc{0.001} & & 0.123 & 0.123 & 5 \\
+        \textsc{0.01}  & & 0.141 & 0.123 & 4 \\
+        \textsc{0.1}   & & 0.160 & 0.185 & 3 \\
+        \textsc{1}     & & 0.175 & 0.267 & 2 \\
+        \textsc{10}    & & 0.188 & 0.322 & 1 \\
+        \bottomrule
+    \end{tabular}
+    \caption{\label{tab:svm_search_results} Accuracies of Support Vector Machine models of Varying C Values}
+    \end{table}
+
+\end{itemize}
+
+
 \subsubsection{Discussion}
 
 Why do you expect the tuned models to perform better than the baseline models and the model used in First Step? Discuss your validation strategy and your conclusions.
 
-\section{Optional Exploration, Part C: Explore some more!}
-\subsection{Approach}
+% \section{Optional Exploration, Part C: Explore some more!}
+% \subsection{Approach}
 
-What did you do? Credit will be given for:
-  \begin{itemize}
-  \item Diving deeply into all of the model classes and/or pre-processing algorithms that you tried (rather than just trying off-the-shelf tools with default settings).  When relevant, provide mathematical descriptions or pseudocode to help us understand how the models you tried make predictions and are trained. 
-  \end{itemize}
+% What did you do? Credit will be given for:
+%   \begin{itemize}
+%   \item Diving deeply into all of the model classes and/or pre-processing algorithms that you tried (rather than just trying off-the-shelf tools with default settings).  When relevant, provide mathematical descriptions or pseudocode to help us understand how the models you tried make predictions and are trained. 
+%   \end{itemize}
   
 
-\subsection{Results}
+% \subsection{Results}
 
-Describe your results in a way that is appropriate for the experiments that you ran.
+% Describe your results in a way that is appropriate for the experiments that you ran.
 
-\subsection{Discussion}
-Credit will be given for:
+% \subsection{Discussion}
+% Credit will be given for:
 
-  \begin{itemize}
-  \item Explaining the your reasoning for why you sequentially chose to
-    try the approaches you did (i.e. what was it about your initial
-    approach that made you try the next change?).  
-  \item Explaining the results.  Did the adaptations you tried improve
-    the results?  \textbf{Why or why not?}  Did you do additional tests to
-    determine if your reasoning was correct?  
-  \end{itemize}
+%   \begin{itemize}
+%   \item Explaining the your reasoning for why you sequentially chose to
+%     try the approaches you did (i.e. what was it about your initial
+%     approach that made you try the next change?).  
+%   \item Explaining the results.  Did the adaptations you tried improve
+%     the results?  \textbf{Why or why not?}  Did you do additional tests to
+%     determine if your reasoning was correct?  
+%   \end{itemize}
  
 
 \end{document}
