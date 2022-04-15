@@ -20,27 +20,6 @@ What did you do? When relevant, provide mathematical descriptions or pseudocode.
   \begin{itemize}
   \item PCA:  Describe what the top 500 principal components represent, and how you computed them.
   \item Logistic regression: Describe how the model you trained predicts output probabilities for each class.
-  \begin{table}[ht]
-    \centering
-    \begin{tabular}{llrrr}
-        \toprule
-        Accuracy &  & Raw & Mel Spectogram & Class \% \\
-        \midrule
-        \textsc{Overall} & & 0.198 & 0.252 & 100\% \\
-        \textsc{Class 0} & & 0.197 & 0.160 & 12.6\% \\
-        \textsc{Class 1} & & 0.026 & 0.462 & 3.54\% \\
-        \textsc{Class 2} & & 0.592 & 0.020 & 12.53\% \\
-        \textsc{Class 3} & & 0.096 & 0.183 & 9.42\% \\
-        \textsc{Class 4} & & 0.072 & 0.227 & 10.93\% \\
-        \textsc{Class 5} & & 0.174 & 0.303 & 12.98\% \\
-        \textsc{Class 6} & & 0.033 & 0.433 & 1.49\% \\
-        \textsc{Class 7} & & 0.119 & 0.102 & 11.85\% \\
-        \textsc{Class 8} & & 0.140 & 0.945 & 12.03\% \\
-        \textsc{Class 9} & & 0.160 & 0.133 & 12.61\% \\
-        \bottomrule
-    \end{tabular}
-    \caption{\label{tab:lr_results} Accuracies of Logistic Regression on Raw and Mel Spectogram Data.}
-    \end{table}
   \end{itemize}
 
 \subsection{Results}
@@ -49,6 +28,27 @@ This section should report on the following questions:
 
 \begin{itemize}
 \item  What is the \textbf{overall} and \textbf{per-class} classification accuracy of the models that you implemented?
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrr}
+    \toprule
+    Accuracy &  & Raw Amplitude & Mel Spectogram & Class \% \\
+    \midrule
+    \textsc{Overall} & & 0.198 & 0.252 & 100\% \\
+    \textsc{Class 0} & & 0.197 & 0.160 & 12.6\% \\
+    \textsc{Class 1} & & 0.026 & 0.462 & 3.54\% \\
+    \textsc{Class 2} & & 0.592 & 0.020 & 12.53\% \\
+    \textsc{Class 3} & & 0.096 & 0.183 & 9.42\% \\
+    \textsc{Class 4} & & 0.072 & 0.227 & 10.93\% \\
+    \textsc{Class 5} & & 0.174 & 0.303 & 12.98\% \\
+    \textsc{Class 6} & & 0.033 & 0.433 & 1.49\% \\
+    \textsc{Class 7} & & 0.119 & 0.102 & 11.85\% \\
+    \textsc{Class 8} & & 0.140 & 0.945 & 12.03\% \\
+    \textsc{Class 9} & & 0.160 & 0.133 & 12.61\% \\
+    \bottomrule
+\end{tabular}
+\caption{\label{tab:rf_results} Accuracies of Logistic Regression models on Raw Amplitude and Mel Spectogram Data.}
+\end{table}
 \end{itemize}
 
 \subsection{Discussion}
@@ -77,6 +77,27 @@ This section should report on the following questions:
 
 \begin{itemize}
 \item  What is the overall and per-class classification accuracy of the models that you implemented?
+    \begin{table}[ht]
+    \centering
+    \begin{tabular}{llrrr}
+        \toprule
+        Accuracy &  & Raw Amplitude & Mel Spectogram & Class \% \\
+        \midrule
+        \textsc{Overall} & & 0.248 & 0.334 & 100\% \\
+        \textsc{Class 0} & & 0.230 & 0.280 & 12.6\% \\
+        \textsc{Class 1} & & 0.000 & 0.256 & 3.54\% \\
+        \textsc{Class 2} & & 0.746 & 0.211 & 12.53\% \\
+        \textsc{Class 3} & & 0.035 & 0.424 & 9.42\% \\
+        \textsc{Class 4} & & 0.110 & 0.216 & 10.93\% \\
+        \textsc{Class 5} & & 0.390 & 0.375 & 12.98\% \\
+        \textsc{Class 6} & & 0.033 & 0.167 & 1.49\% \\
+        \textsc{Class 7} & & 0.102 & 0.356 & 11.85\% \\
+        \textsc{Class 8} & & 0.212 & 0.441 & 12.03\% \\
+        \textsc{Class 9} & & 0.127 & 0.437 & 12.61\% \\
+        \bottomrule
+    \end{tabular}
+    \caption{\label{tab:lr_results} Accuracies of Random Forest Classifier models on Raw Amplitude and Mel Spectogram Data.}
+    \end{table}
 \end{itemize}
 
 
