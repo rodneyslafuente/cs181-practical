@@ -2,45 +2,14 @@
 
 \usepackage{common}
 \usepackage{booktabs}
-\title{Practical Write Up}
-\author{Rodney Lafuente \\ lafuentemercado@college.harvard.edu}
+\title{Practical Write-Up}
+\author{Rodney Lafuente\hspace{4cm}Roger Brockett \\ 
+lafuentemercado@college.harvard.edu\hspace{1cm}rbrockett@college.harvard.edu}
 \date{April 1, 2022}
 \begin{document}
 
 
 \maketitle{}
-
-
-\noindent This is the template you should use for submitting your practical assignment. 
-Your write-up must
-answer all questions under the approaches, results, and discussion subsections
-for each of tasks A, B, and C. \\
-
-\noindent If you used existing packages or referred to papers or blogs for ideas,  you should cite these in your report.  You must have \textit{at least one plot or table}
-for each of the results sections in parts A, B, C
-that details the performances of different methods tried, such as one like table \ref{tab:results}. Credit will be given for quantitatively reporting (with clearly
-labeled and captioned figures and/or tables) on the performance of the
-methods you tried compared to your baselines.\\
-
-\begin{table}
-\centering
-\begin{tabular}{llrrr}
- \toprule
- Model &  & Overall Acc (\%) & Class 0 Acc & ... \\
- \midrule
- \textsc{Baseline 1} & & 0.45 & 0.60 & ...\\
- \textsc{Baseline 2} & & 2.59 & 5.00 & ... \\
- \textsc{Model 1} & & 10.59 & 17.54 & ... \\
- \textsc{Model 2} & &13.42 & 16.77 & ... \\
- \textsc{Model 3} & & 7.49 & 9.82 & ... \\
- \bottomrule
-\end{tabular}
-\caption{\label{tab:results} Result tables can compactly illustrate absolute performance, but a plot may be more effective at illustrating a trend.}
-\end{table}
-
-
-\noindent Note that the limit for the report is 4 pages, please prioritize quality over 
-quantity in your submission.\\
 
 \section{Part A: Feature Engineering, Baseline Models}
 
@@ -51,7 +20,27 @@ What did you do? When relevant, provide mathematical descriptions or pseudocode.
   \begin{itemize}
   \item PCA:  Describe what the top 500 principal components represent, and how you computed them.
   \item Logistic regression: Describe how the model you trained predicts output probabilities for each class.
-
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{llrrr}
+        \toprule
+        Accuracy &  & Raw & Mel Spectogram & Class \% \\
+        \midrule
+        \textsc{Overall} & & 0.198 & 0.252 & 100\% \\
+        \textsc{Class 0} & & 0.197 & 0.160 & 12.6\% \\
+        \textsc{Class 1} & & 0.026 & 0.462 & 3.54\% \\
+        \textsc{Class 2} & & 0.592 & 0.020 & 12.53\% \\
+        \textsc{Class 3} & & 0.096 & 0.183 & 9.42\% \\
+        \textsc{Class 4} & & 0.072 & 0.227 & 10.93\% \\
+        \textsc{Class 5} & & 0.174 & 0.303 & 12.98\% \\
+        \textsc{Class 6} & & 0.033 & 0.433 & 1.49\% \\
+        \textsc{Class 7} & & 0.119 & 0.102 & 11.85\% \\
+        \textsc{Class 8} & & 0.140 & 0.945 & 12.03\% \\
+        \textsc{Class 9} & & 0.160 & 0.133 & 12.61\% \\
+        \bottomrule
+    \end{tabular}
+    \caption{\label{tab:lr_results} Accuracies of Logistic Regression on Raw and Mel Spectogram Data.}
+    \end{table}
   \end{itemize}
 
 \subsection{Results}
