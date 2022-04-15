@@ -5,7 +5,7 @@
 \title{Practical Write-Up}
 \author{Rodney Lafuente\hspace{4cm}Roger Brockett \\ 
 lafuentemercado@college.harvard.edu\hspace{1cm}rbrockett@college.harvard.edu}
-\date{April 1, 2022}
+\date{April 15, 2022}
 \begin{document}
 
 
@@ -28,7 +28,7 @@ This section should report on the following questions:
 
 \begin{itemize}
 \item  What is the \textbf{overall} and \textbf{per-class} classification accuracy of the models that you implemented?
-\begin{table}[ht]
+\begin{table}[h]
 \centering
 \begin{tabular}{llrrr}
     \toprule
@@ -50,6 +50,22 @@ This section should report on the following questions:
 \caption{\label{tab:rf_results} Accuracies of Logistic Regression models on Raw Amplitude and Mel Spectogram Data.}
 \end{table}
 \end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{amp_lr_cfm} % first figure itself
+        \caption{Confusion Matrix of Logistic Regression on Raw Amplitude Data}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{mel_lr_cfm} % second figure itself
+        \caption{Confusion Matrix of Logistic Regression on Mel Spectogram Data}
+    \end{minipage}
+\end{figure}
+
 
 \subsection{Discussion}
 
@@ -77,7 +93,7 @@ This section should report on the following questions:
 
 \begin{itemize}
 \item  What is the overall and per-class classification accuracy of the models that you implemented?
-    \begin{table}[ht]
+    \begin{table}[h]
     \centering
     \begin{tabular}{llrrr}
         \toprule
@@ -98,7 +114,22 @@ This section should report on the following questions:
     \end{tabular}
     \caption{\label{tab:lr_results} Accuracies of Random Forest Classifier models on Raw Amplitude and Mel Spectogram Data.}
     \end{table}
+
+    \begin{figure}[h!]
+        \centering
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{amp_rf_cfm} % first figure itself
+            \caption{Confusion Matrix of Random Forest Classifier on Raw Amplitude Data}
+        \end{minipage}\hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{mel_rf_cfm} % second figure itself
+            \caption{Confusion Matrix of Random Forest Classifier on Mel Spectogram Data}
+        \end{minipage}
+    \end{figure}
 \end{itemize}
+
 
 
 \subsubsection{Discussion}
@@ -120,7 +151,7 @@ Present your results of your hyperparameter search in a way that best reflects h
 
 \begin{itemize}
     \item RFC: The results from the hyperparameter grid search on Random Forest Classifiers showed...
-    \begin{table}[ht]
+    \begin{table}[h]
     \centering
     \begin{tabular}{llrrr}
         \toprule
@@ -137,7 +168,7 @@ Present your results of your hyperparameter search in a way that best reflects h
     \end{table}
     
     \item SVM: The results on ...
-    \begin{table}[ht]
+    \begin{table}[h]
     \centering
     \begin{tabular}{llrrr}
         \toprule
